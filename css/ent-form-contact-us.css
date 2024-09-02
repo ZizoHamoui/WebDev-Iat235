@@ -1,0 +1,28 @@
+.thank-you-message {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    padding: 4rem;
+    border: 0.125rem solid #000;
+    border-radius: 2rem; 
+    width: 80%; 
+    max-width: 30rem;
+}
+
+@media (max-width:50rem) {
+    .thank-you-message {
+        font-size: 1.25rem;
+        width: 80%;
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 25rem) {
+    .thank-you-message {
+        font-size: 0.8rem;
+        width: 90%;
+        padding: 2rem;
+    }
+}
