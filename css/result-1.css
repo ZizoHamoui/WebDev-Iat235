@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero Image */
+.hero-image {
+    position: relative;
+    background-image: url('../images/Active-Outdoors.jpg');
+    height: 33.5rem; /* 536px */
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-image-header {
+    position: absolute;
+    top: 50%;
+    left: 4rem;
+    transform: translateY(-50%);
+    text-align: left;
+    color: white;
+    z-index: 2;
+}
+
+.hero-image h2, .hero-image p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; /* ExtraBold for h2 */
+    font-size: 3.75rem; /* 60px for h2 */
+    margin-bottom: 1rem;
+}
+
+.hero-image p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; /* SemiBold */
+    font-size: 1.875rem;
+    margin: 0;
+    font-weight: 400; /* Adjusted for p */
+}
+
+/* Overlay */
+.hero-image::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(19, 121, 95, 0.47);
+}
+
+/* Results */
+.results {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #F8EEE1;
+}
+
+.results h1, .results p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; /* ExtraBold for h1 */
+    font-size: 3.75rem; /* 60px for h1 */
+    color: rgb(19, 121, 95); /* Adjusted for h1 */
+}
+
+.results p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; /* SemiBold */
+    font-size: 1.875rem;
+    color: rgb(136,178,159); /* Adjusted for p */
+}
+
+/* Button */
+.explore-button {
+    font-size: 1.75rem; /* 28px */
+    background-color: rgb(244, 125, 41);
+    color: white;
+    padding: 0.625rem 2.25rem; /* Adjusted padding */
+    border-radius: 1.875rem; /* 30px */
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem; /* 32px */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.explore-button:hover {
+    background-color: rgb(233, 168, 122);
+    opacity: 0.8;
+}
+
+.explore-button:active {
+    background-color: white;
+    color: rgb(233, 168, 122);
+}
+
+@media (max-width: 800px) {
+    .hero-image h2 {
+        font-size: 2rem;
+    }
+
+    .hero-image p, .results h1, .results p {
+        font-size: 1rem;
+    }
+
+    .explore-button {
+        font-size: 1.125rem;
+        padding: 0.625rem 1.875rem;
+    }
+}
+
+@media (max-width: 25rem) {
+    .hero-image, .results h1, .results p, .explore-button {
+        font-size: calc(1rem + 1vw); /* Responsive sizes */
+    }
+}
