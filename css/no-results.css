@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hero Image */
+.hero-image {
+    position: relative;
+    background-image: url('../images/Search-page.jpg');
+    height: 33.5rem; /* 536px */
+    width: 100%;
+    background-size: cover;
+    background-position: bottom;
+}
+
+/* Overlay */
+.hero-image::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(19, 121, 95, 0.47);
+}
+
+.no-results {
+    text-align: center;
+    padding: 4rem 0;
+    background-color:#F8EEE1;; 
+}
+
+.no-results h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800; /* ExtraBold */
+    font-size: 3.75rem; /* 60px */
+    color: rgb(19, 121, 95);
+    /* color: white; */
+    /* color: rgb(233, 168, 122); */
+    margin-bottom: 1rem;
+}
+
+.no-results p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600; /* SemiBold */
+    font-size: 1.875rem;
+    color: rgb(136,178,159);
+    /* color: white; */
+    color: rgb(233, 168, 122);
+}
+
+
+
+/*800px tablet sizes */
+@media (max-width: 800px) {
+    .no-results h1 {
+        font-size: 2rem;
+    }
+
+    .no-results p {
+        font-size: 1rem;
+    }
+}
+
+/* Below 400px mobile screen */
+@media (max-width: 25rem) {
+    /* Hero image */
+    .hero-image {
+        height: 20rem;
+        background-size: cover; 
+    }
+
+    .hero-text {
+        align-items: center;
+        padding: 0 5%; 
+        width: 10%; 
+    }
+
+    .hero-image h1 {
+        font-size: calc(1.25rem + 1vw);
+    }
+    .hero-image p {
+        font-size: calc(0.5rem + 1vw);
+        line-height: 1.4;
+    }
+}
+
+
+/* for mobile incquiry form 400px */
+@media (max-width: 25rem)
+{
+    .no-results h1 {
+        font-size: calc(1.25rem + 1vw);
+    }
+
+    .no-results p {
+        font-size: calc(0.5rem + 1vw);
+    }
+}
